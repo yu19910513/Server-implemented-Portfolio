@@ -28,7 +28,7 @@ Here is a list of the APIs:
 
 
 ## Deployed Link
-https://yu19910513.github.io/Responsive-Porfolio/
+https://yu19910513.github.io/Server-implemented-Portfolio/
 
 
 ## MIT License
