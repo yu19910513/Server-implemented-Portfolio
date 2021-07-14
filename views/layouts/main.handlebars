@@ -1,96 +1,133 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rex_Tech-Blog</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;0,600;1,300;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/animista.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body class="bg-secondary container">
-    <nav class="navbar navbar-expand-lg">
-      <div class="tracking-in-expand">
-        <a class="navbar-brand text-white" href="/">TECH BLOG</a>
-        <button
-          class="navbar-toggler bg-info"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button></div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rex's Portfolio 2.0</title>
+    <link rel="reset" href="./public/css/reset.css">
+    <link rel="stylesheet" href="./uikit-3.7.0/css/uikit.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./public/css/stylesheet.css">
+</head>
+<body>
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <nav class="navbar navbar-expand navbar-dark">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class='dropdown-item' href="https://stark-badlands-81359.herokuapp.com">All About That Art <span class="badge badge-warning"> new</span></a>
+                          <a class="dropdown-item" href="https://desolate-wave-46699.herokuapp.com/">Tech Blog</a>
+                          <a class="dropdown-item" href="https://github.com/yu19910513/Employee-Tracker">Employee Tracker | <span class="text-success">Github</span></a>
+                          <a class='dropdown-item' href="https://rex-note-taker.herokuapp.com/">Note Taker</a>
+                          <a class="dropdown-item" href="https://yu19910513.github.io/Project-1__Kid-s-Learning-Resources/">Kid's Corner</a>
+                          <a class="dropdown-item" href="https://yu19910513.github.io/homework06/">Weather Station</a>
+                          <a class="dropdown-item" href="https://yu19910513.github.io/homework05/">Daily Scheduler</a>
+                          <a class="dropdown-item" href="https://yu19910513.github.io/homework04/">A Small Quiz</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="https://twomountaineers.myportfolio.com/">Some Mountains</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://github.com/yu19910513?tab=repositories">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://www.linkedin.com/in/rexyu0513/">LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./assets/images/resume.pdf">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="modal" data-target="#exampleModalLong">Contact Info</a>
+                      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">Contact Information</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <b>Cell:</b> (253)219-8399
+                              <br>
+                              <b>Email:</b> <a href="rexyu@uw.edu">rexyu@uw.edu</a>
+                              <br>
+                              <b>Location:</b> Greater Seattle Area
+                            </div>
 
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </nav>
+          </div>
+        </div>
 
-          {{#if loggedIn}}
-            <li class="nav-item">
-              <a href="/" class="nav-link homepage text-white" >Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="/dashboard" class="nav-link dashboard text-white" >
-                Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="/dashboard/create/"
-                class="nav-link create text-white"
-
-              >Create</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link logout text-white" >Logout</a>
-            </li>
-
-          {{else}}
-            <li class="nav-item">
-              <a href="/" class="nav-link homepage text-white" >Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="/login" class="nav-link login text-white" >Login</a>
-            </li>
-          {{/if}}
-        </ul>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="text-right text-white bg-dark timer"></div>
+        </nav>
       </div>
-    </nav>
-    <main>
-      {{{body}}}
-    </main>
+
+<div class="headerPhoto">
+    <img src="./img/rex.jpeg" alt="portfolio" class="profile">
+    <!-- <img src="./assets/images/IMG_6601.jpg" class="hover-img"> -->
+</div>
+<div class="container text-center mt-5 mb-5 bigHead">
+    <h1>Dr. Rex Yu, PharmD</h1>
+    <p>Over the past 10 years, I have had the pleasure of working in the clinical frontline providing healthcare services. Yet, as the healthcare industry has been transforming rapidly over the COVID-19 pandemic, patients rely on digital resources for medical opinions more than ever. Unfortunately, healthcare information for the general public on the internet is often inaccurate, and the misinformation may lead to patient harm and significant expense of healthcare dollars. Technological implementation has been proven effective for error prevention and medication stewardship. Healthcare informatics however remains untouched. Therefore, I urged myself to learn the computing skills in an agile manner. My goal is to excel in the skills of programming, troubleshooting, and software development, and be able to deliver meaningful projects across two professions.
+      <br><br>I am self-driven and detail-oriented. With strong planning and troubleshooting skills, I was able to complete all of assignements and projetcs on time and go beyond what was required throughout the boot camp. I am eager to learn new skills and computer languages, and open for any constructive criticism. For the future, the goal is to be a healthcare engineer.
+     </p>
+    <div class="col-lg-4 d-flex justify-content-end">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="https://www.linkedin.com/in/rexyu0513/" class="fa fa-linkedin"></a>
+      <a href="#" class="fa fa-instagram"></a>
+    </div>
+</div>
+
+<main class="text-center container">
+    <section>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link homeOption" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><b>Home</b></a>
+          <a class="nav-item nav-link profileOption" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+          <a class="nav-item nav-link postOption" id="nav-post-tab" data-toggle="tab" href="#nav-post" role="tab" aria-controls="nav-post" aria-selected="false">Post & Comments</a>
+          <a class="nav-item nav-link contactOption" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"></div>
 
 
-    {{#if loggedIn}}
-      <script src="javascript/logout.js"></script>
-    {{/if}}
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"
-    ></script>
-  </body>
+
+
+
+
+
+</main>
+<footer class="mt-5">
+  <h5>Designed by Rex</h5>
+    <p>
+        &copy; 2021 Me & Me.
+    </p>
+</footer>
+<script src="./uikit-3.7.0/js/uikit.min.js"></script>
+<script src="./uikit-3.7.0/js/uikit-icons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="./public/javascript.js"></script>
+</body>
 </html>
