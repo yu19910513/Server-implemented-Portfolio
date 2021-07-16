@@ -55,7 +55,10 @@ width: 24.5%;
 .cards {
     display: flex;
     justify-content: space-around;
+    background-color: rgba(245, 245, 245, 0.4);
 }
+
+
 .card a :hover {
     opacity: 80%;
 }
@@ -83,7 +86,7 @@ width: 24.5%;
     }
 
     .card{
-        width: 50%;
+        width: 49%;
     }
 
     .profile, .hover-img{
@@ -96,7 +99,12 @@ width: 24.5%;
     /* .skillCard .card {
         background-color: rgb(240, 237, 231);
     } */
-
+    .cards{
+        display: block;
+        }
+        .card{
+        width: 49%;
+        }
     .profile, .hover-img{
         width: 30%;
         height: 30%;
